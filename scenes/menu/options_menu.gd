@@ -58,4 +58,7 @@ func on_sfx_drag_ended(value_changed: bool):
 
 
 func on_back_pressed():
+	SceneTransition.close_screen()
+	await SceneTransition.transition_halfway
 	back_pressed.emit()
+	SceneTransition.open_screen()
