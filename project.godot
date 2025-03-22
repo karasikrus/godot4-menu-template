@@ -18,9 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneTransition="*res://scenes/autoload/scene_transition.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 LevelManager="*res://scenes/autoload/level_manager.gd"
 StateManager="*res://scenes/autoload/state_manager.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
