@@ -12,16 +12,14 @@ func _ready():
 func on_play_pressed():
 	SceneTransition.close_screen()
 	await SceneTransition.transition_halfway
-	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+	LevelManager.load_specific_scene("res://scenes/main/main.tscn")
 	SceneTransition.open_screen()
 
 
 func on_options_pressed():
 	SceneTransition.close_screen()
 	await SceneTransition.transition_halfway
-	var options_instance = options_scene.instantiate() as OptionsMenu
-	add_child(options_instance)
-	options_instance.back_pressed.connect(on_options_closed.bind(options_instance))
+	LevelManager.load_specific_scene("res://scenes/menu/options_menu.tscn")
 	SceneTransition.open_screen()
 
 

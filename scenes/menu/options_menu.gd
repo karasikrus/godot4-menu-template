@@ -60,5 +60,5 @@ func on_sfx_drag_ended(value_changed: bool):
 func on_back_pressed():
 	SceneTransition.close_screen()
 	await SceneTransition.transition_halfway
-	back_pressed.emit()
+	LevelManager.load_specific_scene("res://scenes/menu/main_menu.tscn")
 	SceneTransition.open_screen()
