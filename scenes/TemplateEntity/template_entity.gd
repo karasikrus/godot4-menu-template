@@ -5,7 +5,6 @@ class_name TemplateEntity
 @onready var entity_path : String = "res://scenes/TemplateEntity/"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var stringTest = get_tree().current_scene.scene_file_path
 	init_audio_streams()
 	start_idle_animation()
 	audio_player.play()
