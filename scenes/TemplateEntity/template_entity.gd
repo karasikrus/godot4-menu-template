@@ -5,10 +5,10 @@ class_name TemplateEntity
 @onready var entity_path : String = "res://scenes/TemplateEntity/"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var stringTest = get_tree().current_scene.scene_file_path
 	init_audio_streams()
 	start_idle_animation()
 	audio_player.play()
-	
 	pass # Replace with function body.
 
 
@@ -82,7 +82,7 @@ static var audio_streams = []
 static var initialized_stream = false
 @onready var audio_state : AUDIO_STATE = AUDIO_STATE.IDLE
 #sorry, need to guarantee, that we are initing sound in one thread
-@onready var audio_mutex: Mutex  = Mutex.new()
+static var audio_mutex: Mutex = Mutex.new()
 
 
 func init_audio_streams():
